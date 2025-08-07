@@ -213,14 +213,11 @@ const PortfolioDetail = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <h3 className="font-playfair text-2xl font-bold text-foreground mb-4">
-            Ready to Transform Your Space?
+            Inspired by This Design?
           </h3>
           <p className="font-inter text-muted-foreground mb-6">
-            Let's create something beautiful together
+            Contact us to discuss your project vision
           </p>
-          <Button size="lg" onClick={() => navigate('/#contact')}>
-            Start Your Project
-          </Button>
         </div>
       </div>
     </div>

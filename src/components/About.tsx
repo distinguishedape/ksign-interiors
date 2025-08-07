@@ -13,9 +13,8 @@ const About = () => {
             
             <div className="space-y-4 mb-8">
               <p className="font-inter text-lg text-muted-foreground leading-relaxed">
-                With over a decade of experience in interior design, we believe that every space tells a story. 
-                Our mission is to help you tell yours through thoughtfully curated environments that blend 
-                functionality with timeless elegance.
+                We believe that every space tells a story. Our mission is to help you tell yours through 
+                thoughtfully curated environments that blend functionality with timeless elegance.
               </p>
               
               <p className="font-inter text-lg text-muted-foreground leading-relaxed">
@@ -25,24 +24,20 @@ const About = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="font-playfair text-3xl font-bold text-primary mb-1">150+</div>
+                <div className="font-playfair text-3xl font-bold text-primary mb-1">25+</div>
                 <div className="font-inter text-sm text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="font-playfair text-3xl font-bold text-primary mb-1">12</div>
+                <div className="font-playfair text-3xl font-bold text-primary mb-1">3</div>
                 <div className="font-inter text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="font-playfair text-3xl font-bold text-primary mb-1">98%</div>
+                <div className="font-playfair text-3xl font-bold text-primary mb-1">100%</div>
                 <div className="font-inter text-sm text-muted-foreground">Client Satisfaction</div>
               </div>
             </div>
-            
-            <Button size="lg" className="font-inter font-medium">
-              Learn More About Us
-            </Button>
           </div>
           
           <div className="relative">

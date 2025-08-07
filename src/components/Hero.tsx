@@ -26,9 +26,6 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="font-inter font-medium">
-              Start Your Project
-            </Button>
             <Button variant="outline" size="lg" className="font-inter font-medium">
               View Portfolio
             </Button>

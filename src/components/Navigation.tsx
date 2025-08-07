@@ -28,10 +28,6 @@ const Navigation = () => {
               Contact
             </a>
           </div>
-          
-          <Button variant="default" className="font-inter">
-            Get Quote
-          </Button>
         </div>
       </div>
     </nav>
