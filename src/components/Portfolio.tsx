@@ -1,21 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import bedroomImage from "@/assets/bedroom-design.jpg";
 import kitchenImage from "@/assets/kitchen-design.jpg";
 import officeImage from "@/assets/office-design.jpg";
 
 const portfolioItems = [
   {
+    id: "bedroom",
     title: "Serene Bedroom Sanctuary",
     category: "Residential",
     image: bedroomImage,
     description: "A calming retreat featuring natural textures and our signature color palette"
   },
   {
+    id: "kitchen",
     title: "Modern Kitchen Haven",
     category: "Kitchen Design",
     image: kitchenImage,
     description: "Clean lines and functional beauty merge in this contemporary kitchen space"
   },
   {
+    id: "office",
     title: "Productive Home Office",
     category: "Workspace",
     image: officeImage,
@@ -24,6 +28,7 @@ const portfolioItems = [
 ];
 
 const Portfolio = () => {
+  const navigate = useNavigate();
   return (
     <section id="portfolio" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -38,7 +43,11 @@ const Portfolio = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
-            <div key={index} className="group cursor-pointer">
+            <div 
+              key={index} 
+              className="group cursor-pointer"
+              onClick={() => navigate(`/portfolio/${item.id}`)}
+            >
               <div className="relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-500">
                 <img 
                   src={item.image} 
