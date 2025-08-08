@@ -1,9 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Play } from "lucide-react";
-import YouTubeEmbed, { getYouTubeIdFromUrl } from "@/components/YouTubeEmbed";
 import bedroomImage from "@/assets/bedroom-design.jpg";
 import kitchenImage from "@/assets/kitchen-design.jpg";
 import officeImage from "@/assets/office-design.jpg";
@@ -58,9 +56,6 @@ const PortfolioDetail = () => {
   const navigate = useNavigate();
   
   const project = projectId ? portfolioData[projectId as keyof typeof portfolioData] : null;
-  const videoId = project?.videoUrl ? getYouTubeIdFromUrl(project.videoUrl) : null;
-  const [isPlaying, setIsPlaying] = useState(false);
-  useEffect(() => setIsPlaying(false), [videoId]);
 
   if (!project) {
     return (
@@ -142,43 +137,33 @@ const PortfolioDetail = () => {
         </div>
 
         {/* Transformation Video */}
-        {videoId && (
-          <div className="mb-16">
-            <h2 className="font-playfair text-3xl font-bold text-foreground mb-8 text-center">
-              Transformation Process
-            </h2>
-            <div className="max-w-4xl mx-auto">
-              <Card className="overflow-hidden">
-                <CardContent className="p-0 relative">
-                  {!isPlaying ? (
-                    <div className="bg-muted h-64 md:h-96 flex items-center justify-center relative">
-                      <img 
-                        src={project.afterImage} 
-                        alt="Video thumbnail"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-foreground/20 flex items-center justify-center">
-                        <Button 
-                          size="lg" 
-                          className="rounded-full w-16 h-16 p-0"
-                          onClick={() => setIsPlaying(true)}
-                          aria-label="Play transformation video"
-                        >
-                          <Play className="w-6 h-6 ml-1" />
-                        </Button>
-                      </div>
-                    </div>
-                  ) : (
-                    <YouTubeEmbed url={project.videoUrl} title={`${project.title} transformation video`} />
-                  )}
-                </CardContent>
-              </Card>
-              <p className="text-center text-muted-foreground mt-4 font-inter">
-                Watch the complete transformation process from start to finish
-              </p>
-            </div>
+        <div className="mb-16">
+          <h2 className="font-playfair text-3xl font-bold text-foreground mb-8 text-center">
+            Transformation Process
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden">
+              <CardContent className="p-0 relative">
+                <div className="bg-muted h-64 md:h-96 flex items-center justify-center relative">
+                  <img 
+                    src={project.afterImage} 
+                    alt="Video thumbnail"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-foreground/20 flex items-center justify-center">
+                    <Button size="lg" className="rounded-full w-16 h-16 p-0">
+                      <Play className="w-6 h-6 ml-1" />
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <p className="text-center text-muted-foreground mt-4 font-inter">
+              Watch the complete transformation process from start to finish
+            </p>
           </div>
-        )}
+        </div>
 
         {/* Project Details */}
         <div className="max-w-4xl mx-auto">
