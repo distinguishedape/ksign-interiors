@@ -2,51 +2,55 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Play } from "lucide-react";
-import bedroomImage from "@/assets/bedroom-design.jpg";
-import kitchenImage from "@/assets/kitchen-design.jpg";
-import officeImage from "@/assets/office-design.jpg";
+import kitchenAfterImage from "@/assets/kitchenAfterImage.jpeg";
+import kitchenBeforeImage from "@/assets/kitchenBeforeImage.jpeg";
+import podcastStudioAfterImage from '@/assets/podcastStudioAfterImage.jpeg';
+import podcastStudioBeforeImage from '@/assets/podcastStudioBefore.jpeg';
+import musicStudioafterImage from '@/assets/musicStudioAfterImage.jpeg';
+import musicStudioBeforeImage from '@/assets/musicStudioBeforeImage.jpeg';
+
 
 const portfolioData = {
-  "bedroom": {
-    title: "Serene Bedroom Sanctuary",
-    category: "Residential",
-    description: "A complete transformation of a master bedroom into a calming retreat featuring natural textures, soft lighting, and our signature color palette.",
-    beforeImage: bedroomImage, // Placeholder - would be actual before image
-    afterImage: bedroomImage,
-    videoUrl: "https://example.com/bedroom-transformation.mp4", // Placeholder
-    details: {
-      timeline: "6 weeks",
-      budget: "$15,000 - $25,000",
-      style: "Modern Minimalist",
-      features: ["Custom built-in storage", "Natural lighting optimization", "Sustainable materials", "Smart home integration"]
-    }
-  },
   "kitchen": {
-    title: "Modern Kitchen Haven",
-    category: "Kitchen Design",
-    description: "A complete kitchen renovation that merges clean lines with functional beauty, creating the perfect space for cooking and entertaining.",
-    beforeImage: kitchenImage,
-    afterImage: kitchenImage,
-    videoUrl: "https://example.com/kitchen-transformation.mp4",
-    details: {
-      timeline: "8 weeks",
-      budget: "$35,000 - $50,000",
-      style: "Contemporary",
-      features: ["Quartz countertops", "Custom cabinetry", "High-end appliances", "Open concept design"]
-    }
-  },
-  "office": {
-    title: "Productive Home Office",
-    category: "Workspace",
-    description: "An inspiring workspace designed for creativity and focused productivity, featuring ergonomic design and natural elements.",
-    beforeImage: officeImage,
-    afterImage: officeImage,
-    videoUrl: "https://example.com/office-transformation.mp4",
+    title: "Contemporary Wood Kitchen",
+    category: "Residential",
+    description: "Blending natural wood tones with modern design, this kitchen offers a perfect balance of elegance and practicality.",
+    beforeImage: kitchenBeforeImage, // Placeholder - would be actual before image
+    afterImage: kitchenAfterImage,
+    videoUrl: "https://youtube.com/shorts/fjS7gtyV438?feature=share", // Placeholder
     details: {
       timeline: "4 weeks",
-      budget: "$8,000 - $15,000",
-      style: "Scandinavian",
-      features: ["Ergonomic furniture", "Natural lighting", "Built-in shelving", "Cable management system"]
+      budget: "1.5 Lakhs to 2 Lakhs",
+      style: "Modern Rustic",
+      features: ["Custom wooden cabinetry", "Marble-look countertops", "Textured backsplash", "Under-cabinet lighting"]
+  }
+  },
+  "podcastStudio": {
+    title: "Unscripted Podcast Studio",
+    category: "Commercial Design",
+    description: "A contemporary podcast recording studio featuring acoustic treatments, fully equiped studio setup, stylish décor, and functional design for a professional yet inviting atmosphere.",
+    beforeImage: podcastStudioBeforeImage,
+    afterImage: podcastStudioAfterImage,
+    videoUrl: "https://youtube.com/shorts/hkvE6O_Blyo",
+    details: {
+      timeline: "2 week",
+      budget: "7 Lakh to 7.5 Lakh",
+      style: "Modern Minimalist",
+      features: ["3D geometric acoustic panels", "Neon wall signage", "Custom LED mood lighting", "Professional recording setup"]
+    }
+  },
+  "newsStudio": {
+    title: "State-of-the-art News Studio - In progress",
+    category: "Commercial",
+    description: "State-of-the-art news studio in progress, designed with advanced acoustic planning, premium materials, and a creative layout to inspire artists and producers.",
+    beforeImage: musicStudioBeforeImage,
+    afterImage: musicStudioafterImage,
+    videoUrl: "https://youtube.com/shorts/fNoV2gJ-Gm4?feature=share",
+    details: {
+      timeline: "2 weeks",
+      budget: "3 Lakhs",
+      style: "Modern Acoustic",
+      features: ["Custom acoustic wall panels", "Sound isolation", "Optimized room geometry", "Professional-grade finishes"]
     }
   }
 };
@@ -144,19 +148,21 @@ const PortfolioDetail = () => {
           
           <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden">
-              <CardContent className="p-0 relative">
-                <div className="bg-muted h-64 md:h-96 flex items-center justify-center relative">
-                  <img 
-                    src={project.afterImage} 
-                    alt="Video thumbnail"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-foreground/20 flex items-center justify-center">
-                    <Button size="lg" className="rounded-full w-16 h-16 p-0">
-                      <Play className="w-6 h-6 ml-1" />
-                    </Button>
-                  </div>
-                </div>
+              <CardContent className="p-0">
+              <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+                <iframe
+                  src={project.videoUrl
+                    .replace("shorts/", "embed/")
+                    .replace("watch?v=", "embed/")
+                    .replace("?feature=share", "")
+                  }
+                  title="Transformation Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
               </CardContent>
             </Card>
             <p className="text-center text-muted-foreground mt-4 font-inter">

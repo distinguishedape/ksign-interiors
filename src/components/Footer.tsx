@@ -5,21 +5,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="font-playfair text-2xl font-semibold text-foreground mb-4">
-              Serene Spaces
+              KSign Interiors
             </h3>
             <p className="font-inter text-muted-foreground mb-4 max-w-md">
               Creating timeless interiors that reflect your personality and enhance your lifestyle. 
               Elegant design solutions crafted with passion and precision.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/ksign_interiors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-muted-foreground hover:text-primary transition-colors">
                 Instagram
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Pinterest
+                {/* Pinterest*/}
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                LinkedIn
+                
               </a>
             </div>
           </div>
@@ -40,14 +40,14 @@ const Footer = () => {
               <li><a href="#" className="font-inter text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#" className="font-inter text-muted-foreground hover:text-primary transition-colors">Portfolio</a></li>
               <li><a href="#" className="font-inter text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="font-inter text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
+              <li><a href="#" className="font-inter text-muted-foreground hover:text-primary transition-colors"></a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="font-inter text-muted-foreground">
-            © 2024 Serene Spaces. All rights reserved.
+            
           </p>
         </div>
       </div>

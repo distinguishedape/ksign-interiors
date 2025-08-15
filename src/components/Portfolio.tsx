@@ -1,28 +1,31 @@
 import { useNavigate } from "react-router-dom";
-import bedroomImage from "@/assets/bedroom-design.jpg";
-import kitchenImage from "@/assets/kitchen-design.jpg";
+import kitchenAfterImage from "@/assets/kitchenAfterImage.jpeg";
 import officeImage from "@/assets/office-design.jpg";
+import kitchenImage from "@/assets/kitchen-design.jpg";
+import podcastStudioAfterImage from '@/assets/podcastStudioAfterImage.jpeg'
+import musicStudioBeforeImage from '@/assets/musicStudioBeforeImage.jpeg';
+import musicStudioAfterImage from '@/assets/musicStudioAfterImage.jpeg';
 
 const portfolioItems = [
   {
-    id: "bedroom",
-    title: "Serene Bedroom Sanctuary",
-    category: "Residential",
-    image: bedroomImage,
-    description: "A calming retreat featuring natural textures and our signature color palette"
-  },
-  {
     id: "kitchen",
-    title: "Modern Kitchen Haven",
-    category: "Kitchen Design",
-    image: kitchenImage,
-    description: "Clean lines and functional beauty merge in this contemporary kitchen space"
+    title: "Contemporary Wood Kitchen",
+    category: "Residential",
+    image: kitchenAfterImage,
+    description: "Blending natural wood tones with modern design, this kitchen offers a perfect balance of elegance and practicality."
   },
   {
-    id: "office",
-    title: "Productive Home Office",
+    id: "podcastStudio",
+    title: "Unscripted Podcast Studio",
+    category: "Commercial",
+    image: podcastStudioAfterImage,
+    description: "A contemporary podcast recording studio featuring acoustic treatments, stylish décor, and functional design for a professional yet inviting atmosphere."
+  },
+  {
+    id: "newsStudio",
+    title: "State-of-the-art News Studio - In progress",
     category: "Workspace",
-    image: officeImage,
+    image: musicStudioAfterImage,
     description: "An inspiring workspace designed for creativity and focused productivity"
   }
 ];

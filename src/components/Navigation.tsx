@@ -7,7 +7,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <h1 className="font-playfair text-2xl font-semibold text-foreground">
-              Serene Spaces
+              KSign Interiors
             </h1>
           </div>
           

@@ -24,32 +24,17 @@ const About = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="font-playfair text-3xl font-bold text-primary mb-1">25+</div>
-                <div className="font-inter text-sm text-muted-foreground">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="font-playfair text-3xl font-bold text-primary mb-1">3</div>
-                <div className="font-inter text-sm text-muted-foreground">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="font-playfair text-3xl font-bold text-primary mb-1">100%</div>
-                <div className="font-inter text-sm text-muted-foreground">Client Satisfaction</div>
-              </div>
-            </div>
+           
           </div>
           
           <div className="relative">
             <div className="bg-gradient-subtle rounded-lg p-8 shadow-elegant">
               <blockquote className="text-center">
                 <p className="font-playfair text-xl italic text-foreground mb-4">
-                  "The art of interior design is about creating spaces that not only look beautiful 
-                  but feel like home. Every element should have purpose, every color should evoke emotion, 
-                  and every texture should invite touch."
+                  "A home should be a reflection of the people who live there — their stories, their travels, their favorite colors, the things they can’t part with. It’s about creating a space where every piece feels intentional, where the layers of texture, color, and history make the room not just beautiful, but meaningful."
                 </p>
                 <footer className="font-inter text-muted-foreground">
-                  — Sarah Chen, Principal Designer
+                  — Joanna Gaines
                 </footer>
               </blockquote>
             </div>

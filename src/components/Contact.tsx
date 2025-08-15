@@ -25,8 +25,8 @@ const Contact = () => {
                   Our Studio
                 </h3>
                 <p className="font-inter text-muted-foreground">
-                  123 Design Avenue<br />
-                  Creative District, NY 10001
+                  Opp. Bylane 1<br />
+                  Rajgarh, Guwahati, AS 781003
                 </p>
               </CardContent>
             </Card>
@@ -38,7 +38,7 @@ const Contact = () => {
                   Call Us
                 </h3>
                 <p className="font-inter text-muted-foreground">
-                  +1 (555) 123-4567
+                  +91 7896344889
                 </p>
               </CardContent>
             </Card>
@@ -50,7 +50,7 @@ const Contact = () => {
                   Email Us
                 </h3>
                 <p className="font-inter text-muted-foreground">
-                  hello@serenespaces.com
+                  krishtiborah699@gmail.com
                 </p>
               </CardContent>
             </Card>
@@ -65,13 +65,10 @@ const Contact = () => {
               </h3>
               <div className="space-y-2">
                 <div className="flex justify-between items-center max-w-xs mx-auto">
-                  <span className="font-inter text-foreground">Monday - Friday</span>
-                  <span className="font-inter text-muted-foreground">9:00 AM - 6:00 PM</span>
+                  <span className="font-inter text-foreground">Monday - Saturday</span>
+                  <span className="font-inter text-muted-foreground">10:00 AM - 5:00 PM</span>
                 </div>
-                <div className="flex justify-between items-center max-w-xs mx-auto">
-                  <span className="font-inter text-foreground">Saturday</span>
-                  <span className="font-inter text-muted-foreground">10:00 AM - 4:00 PM</span>
-                </div>
+            
                 <div className="flex justify-between items-center max-w-xs mx-auto">
                   <span className="font-inter text-foreground">Sunday</span>
                   <span className="font-inter text-muted-foreground">By Appointment</span>
