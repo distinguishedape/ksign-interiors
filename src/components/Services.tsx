@@ -27,9 +27,9 @@ const services = [
     icon: "💡"
   },
   {
-    title: "Project Management",
-    description: "End-to-end project coordination ensuring timely completion and quality results.",
-    icon: "⚡"
+    title: "Home Decor",
+    description: "We specialize in creating timeless interiors that blend style, comfort, and functionality. From custom home décor to complete design solutions, we transform spaces into reflections of your personality and lifestyle.",
+    icon: "🖼️"
   }
 ];
 
