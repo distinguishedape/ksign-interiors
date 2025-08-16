@@ -51,14 +51,31 @@ const Portfolio = () => {
               className="group cursor-pointer"
               onClick={() => navigate(`/portfolio/${item.id}`)}
             >
-              <div className="relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-500">
+         <div className="relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-500">
                 <img 
                   src={item.image} 
                   alt={item.title}
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
+
+                 {/* Overlay with CTA */}
+                <div className="
+                  absolute inset-0 
+                  bg-gradient-to-t from-black/70 via-black/40 to-transparent
+                  opacity-100 md:opacity-0 md:group-hover:opacity-100
+                  transition-opacity duration-300
+                  flex flex-col justify-end
+                ">
+                  
+                  {/* Centered CTA */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white font-inter text-lg font-semibold bg-primary/70 px-4 py-2 rounded-lg shadow-md">
+                      Click Here
+                    </span>
+                  </div>
+
+                  {/* Bottom text (category + title) */}
+                  <div className="relative bottom-4 left-4 right-4 text-white">
                     <span className="font-inter text-sm font-medium">{item.category}</span>
                     <h3 className="font-playfair text-lg font-semibold">{item.title}</h3>
                   </div>
