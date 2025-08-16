@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "Home Decor",
-    description: "We specialize in creating timeless interiors that blend style, comfort, and functionality. From custom home décor to complete design solutions, we transform spaces into reflections of your personality and lifestyle.",
+    description: "Transforming spaces into stylish, functional, and personalized homes with expert decor solutions.",
     icon: "🖼️"
   }
 ];
